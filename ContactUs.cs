@@ -19,6 +19,7 @@ namespace automationpractice
         [TestMethod]
         public void ContactUsTest()
         {
+
             driver.Url = "http://automationpractice.com/index.php";
             driver.FindElement(By.Id("contact-link")).Click();
             new SelectElement(driver.FindElement(By.Id("id_contact"))).SelectByValue("2");
@@ -37,7 +38,7 @@ namespace automationpractice
         [TestCleanup]
         public void TestCleanup()
         {
-            driver.Quit();
+           driver.Quit();
         }
     }
 }
